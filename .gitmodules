@@ -1,0 +1,3 @@
+[submodule "static/content/verbose-giggle"]
+	path = static/content/verbose-giggle
+	url = https://github.com/dccoleman/verbose-giggle.git
