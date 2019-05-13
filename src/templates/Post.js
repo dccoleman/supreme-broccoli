@@ -2,16 +2,15 @@ import React from "react";
 
 import { graphql, Link } from "gatsby";
 
+import Layout from "../components/Layout";
+
 export default function Post({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
-    <>
-      <Link to="/">
-        <span>{frontmatter.title}</span>
-      </Link>
+    <Layout title={frontmatter.title}>
       <div dangerouslySetInnerHTML={{ __html: html }} />
-    </>
+    </Layout>
   );
 }
 

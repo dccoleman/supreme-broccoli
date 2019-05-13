@@ -2,9 +2,8 @@ import React from "react";
 
 import { graphql } from "gatsby";
 
-import { Grommet } from "grommet";
-
 import IndexPostList from "../components/IndexPostList";
+import Layout from "../components/Layout";
 
 export default ({
   data: {
@@ -12,9 +11,9 @@ export default ({
   },
 }) => {
   return (
-    <Grommet full>
+    <Layout>
       <IndexPostList pages={edges} />
-    </Grommet>
+    </Layout>
   );
 };
 
