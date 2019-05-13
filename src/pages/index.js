@@ -16,7 +16,6 @@ export default ({
     </Layout>
   );
 };
-//blah
 
 export const pageQuery = graphql`
   query {
