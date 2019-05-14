@@ -17,8 +17,6 @@ export default ({
   );
 };
 
-//blah
-
 export const pageQuery = graphql`
   query {
     allMarkdownRemark {
