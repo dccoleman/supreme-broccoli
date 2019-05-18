@@ -24,7 +24,6 @@ export const pageQuery = graphql`
       edges {
         node {
           ...IndexPostFragment
-          excerpt(pruneLength: 160, format: HTML)
         }
       }
     }
