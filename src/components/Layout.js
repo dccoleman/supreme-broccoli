@@ -58,7 +58,9 @@ export default ({ children, title = "Blog" }) => {
         </Header>
       </Toolbar>
       <Page>{children}</Page>
-      <Footer>devoncoleman.com - I'm a nerd</Footer>
+      <Footer>
+        <Typography>devoncoleman.com - I'm a nerd</Typography>
+      </Footer>
     </Container>
   );
 };
