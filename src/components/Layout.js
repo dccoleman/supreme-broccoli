@@ -35,7 +35,7 @@ export default ({ children, title = "Blog" }) => {
             <HomeIcon />
           </IconButton>
           <Typography variant="h5" gutterBottom>
-            I pushed this: {title}
+            {title}
           </Typography>
           <IconButton>
             <CloseIcon />
