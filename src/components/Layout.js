@@ -11,15 +11,30 @@ import Typography from "@material-ui/core/Typography";
 
 import styled from "styled-components";
 
-const Page = styled.main`
+const Container = styled.main`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Page = styled.section`
   margin-left: 5vw;
   margin-right: 5vw;
 `;
 
-const Header = styled.div`
+const Header = styled.nav`
   display: flex;
   justify-content: space-between;
   width: 100%;
+`;
+
+const Footer = styled.footer`
+  min-height: 40px;
+  background-color: grey;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export default ({ children, title = "Blog" }) => {
@@ -27,14 +42,14 @@ export default ({ children, title = "Blog" }) => {
     navigate("/");
   }, []);
   return (
-    <>
+    <Container>
       <CssBaseline />
       <Toolbar>
         <Header>
           <IconButton onClick={goHome}>
             <HomeIcon />
           </IconButton>
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h4" gutterBottom>
             {title}
           </Typography>
           <IconButton>
@@ -43,7 +58,7 @@ export default ({ children, title = "Blog" }) => {
         </Header>
       </Toolbar>
       <Page>{children}</Page>
-      <span>blah</span>
-    </>
+      <Footer>devoncoleman.com - I'm a nerd</Footer>
+    </Container>
   );
 };
