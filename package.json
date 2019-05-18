@@ -7,6 +7,7 @@
   "scripts": {
     "build": "gatsby build",
     "deploy": "aws s3 sync ./public s3://devoncoleman.com --delete",
+    "kms": "aws ec2 terminate-instances --region us-east-1 --instance-ids $(curl -s http://169.254.169.254/latest/meta-data/instance-id)",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
